@@ -5,43 +5,24 @@
 This repository implements a 2D medical image classification pipeline using the MedNIST dataset
 . The project demonstrates how MONAI can be applied for image preprocessing, augmentation, training, and evaluation in medical imaging tasks.
 
-Features
+Features:
+1. Dataset Setup: Automatic download and setup of the MedNIST dataset (6 classes: AbdomenCT, BreastMRI, CXR, ChestCT, Hand, HeadCT).
+2. Preprocessing & Augmentation: 
+      MONAI transforms: LoadImage, EnsureChannelFirst, ScaleIntensity.
+      Randomized augmentations: RandFlip, RandRotate, RandZoom.
+3. Model Training: 
+    DenseNet121 backbone for robust 2D classification.
+    Loss: Cross-Entropy.
+    Optimizer: Adam.
+4. Evaluation:
+    Metrics: Accuracy, ROC-AUC.
+    Confusion matrix and ROC visualization.
+5. Tech Stack
+    Frameworks: MONAI, PyTorch, Torchvision
+    Languages: Python
+    Tools: Jupyter Notebook, CUDA
 
-Dataset Setup
-
-Automatic download and setup of the MedNIST dataset (6 classes: AbdomenCT, BreastMRI, CXR, ChestCT, Hand, HeadCT).
-
-Preprocessing & Augmentation
-
-MONAI transforms: LoadImage, EnsureChannelFirst, ScaleIntensity.
-
-Randomized augmentations: RandFlip, RandRotate, RandZoom.
-
-Model Training
-
-DenseNet121 backbone for robust 2D classification.
-
-Loss: Cross-Entropy.
-
-Optimizer: Adam.
-
-Evaluation
-
-Metrics: Accuracy, ROC-AUC.
-
-Confusion matrix and ROC visualization.
-
-Tech Stack
-
-Frameworks: MONAI, PyTorch, Torchvision
-
-Languages: Python
-
-Tools: Jupyter Notebook, CUDA
-
-Dataset
-
-Source: MedNIST dataset
+Dataset Source: MedNIST dataset
 
 Classes: AbdomenCT, BreastMRI, CXR, ChestCT, Hand, HeadCT
 
